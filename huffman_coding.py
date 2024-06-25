@@ -57,15 +57,15 @@ if __name__ == "__main__":
 
     a_great_sentence = "The bird is the word"
 
-    print ("The size of the data is: {}\n".format(sys.getsizeof(a_great_sentence)))
-    print ("The content of the data is: {}\n".format(a_great_sentence))
+    print (f"The size of the data is: {sys.getsizeof(a_great_sentence)}"))
+    print (f"The content of the data is: {a_great_sentence}")
 
     encoded_data, key = huffman_encoding(a_great_sentence)
 
-    print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
-    print ("The content of the encoded data is: {}\n".format(encoded_data))
+    print (f"The size of the encoded data is: {sys.getsizeof(int(encoded_data, base=2))}")
+    print (f"The content of the encoded data is: {encoded_data}")
 
     decoded_data = huffman_decoding(encoded_data, key)
 
-    print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
-    print ("The content of the encoded data is: {}\n".format(decoded_data))
+    print (f"The size of the decoded data is: {sys.getsizeof(decoded_data)}")
+    print (f"The content of the encoded data is: {decoded_data}")
