@@ -35,8 +35,8 @@ def make_code(heap):
 def make_key(code):
     # turn code list into key dict
     key = {}
-    for li in code:
-        key[li[0]] = li[1]
+    for arr in code:
+        key[arr[0]] = arr[1]
     return key
 
 def encode(message, key):
