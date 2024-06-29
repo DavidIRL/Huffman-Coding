@@ -10,6 +10,11 @@ def huffman_encoding(message):
     \n
     Will return coded message and key
     """
+    if type(message) != str:
+        return TypeError("input data must be of type string")
+    if len(message) <= 0:
+        return Exception("data to encode must not be empty")
+
     freq = huff.freq_dict(message)
     #print(freq)
     heap = huff.make_heap(freq)
@@ -57,7 +62,7 @@ if __name__ == "__main__":
 
     a_great_sentence = "The bird is the word"
 
-    print (f"The size of the data is: {sys.getsizeof(a_great_sentence)}"))
+    print (f"The size of the data is: {sys.getsizeof(a_great_sentence)}")
     print (f"The content of the data is: {a_great_sentence}")
 
     encoded_data, key = huffman_encoding(a_great_sentence)
