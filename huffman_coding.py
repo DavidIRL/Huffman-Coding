@@ -10,6 +10,7 @@ def huffman_encoding(message):
     \n
     Will return coded message and key
     """
+    # would typically raise error, but using return for manual test.py
     if type(message) != str:
         return TypeError("input data must be of type string")
     if len(message) <= 0:
